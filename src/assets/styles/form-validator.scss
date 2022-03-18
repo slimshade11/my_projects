@@ -1,1 +1,48 @@
 @use './core-styles/_main';
+
+$color-blue: #04b2c9;
+$color-green: #00fd00;
+$color-red: #ff1462;
+$color-gray: #ccc;
+$color-white: #fff;
+
+body {
+  min-height: 100vh;
+}
+
+.form-control {
+  &.success input {
+    border-color: $color-green;
+  }
+
+  &.error input {
+    border-color: $color-red;
+  }
+
+  &.error small {
+    visibility: visible;
+  }
+
+  input {
+    border: $color-gray solid 2px;
+
+    &:focus {
+      border-color: $color-gray;
+      outline: 0;
+    }
+  }
+
+  small {
+    visibility: hidden;
+  }
+}
+
+.submit-btn {
+  background-color: transparent;
+  border: 2px solid $color-blue;
+
+  &:hover {
+    background-color: $color-blue;
+    color: $color-white;
+  }
+}
