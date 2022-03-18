@@ -1,0 +1,12 @@
+{
+  "name": "embiq-site-frontend",
+  "main": "dist/main.js",
+  "source": "src/index.js",
+  "scripts": {
+    "build": "parcel build ./src/*.html --public-url ./ --no-source-maps",
+    "dev-public": "parcel ./src/index.html --host 0.0.0.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.3.2"
+  }
+}
