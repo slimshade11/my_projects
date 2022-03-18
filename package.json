@@ -1,12 +1,25 @@
 {
   "name": "embiq-site-frontend",
-  "main": "dist/main.js",
-  "source": "src/index.js",
+  "source": "src/assets/js/index.js",
   "scripts": {
     "build": "parcel build ./src/*.html --public-url ./ --no-source-maps",
-    "dev-public": "parcel ./src/index.html --host 0.0.0.0"
+    "dev": "parcel ./src/*.html",
+    "dev-public": "parcel ./src/index.html --host 0.0.0.0",
+    "format": "npx prettier --write ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   },
   "devDependencies": {
-    "parcel": "^2.3.2"
+    "@parcel/transformer-sass": "^2.3.2",
+    "husky": "^7.0.4",
+    "parcel": "^2.3.2",
+    "prettier": "^2.6.0",
+    "pretty-quick": "^3.1.3"
+  },
+  "dependencies": {
+    "primeflex": "^3.1.3"
   }
 }

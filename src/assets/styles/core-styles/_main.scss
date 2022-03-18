@@ -1,0 +1,59 @@
+@forward '../../../../node_modules/primeflex/primeflex.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: 'Montserrat', sans-serif;
+}
+
+$resolutions: (
+  'sm': 576,
+  'md': 768,
+  'lg': 992,
+  'xl': 1074,
+  'xxl': 1500,
+);
+
+$sm-breakpoint: 576px;
+$md-breakpoint: 768px;
+$lg-breakpoint: 992px;
+$xl-breakpoint: 1200px;
+$xxl-breakpoint: 1500px;
+
+@each $resolution, $i in $resolutions {
+  .container-max-w-#{$resolution} {
+    max-width: #{$i}px;
+    margin: 0 auto !important;
+  }
+}
+
+ul {
+  list-style: none;
+  padding-inline: unset;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.radius {
+  &-5 {
+    border-radius: 5px;
+  }
+
+  &-8 {
+    border-radius: 8px;
+  }
+}
