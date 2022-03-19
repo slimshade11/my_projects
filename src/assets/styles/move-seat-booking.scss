@@ -4,6 +4,7 @@ $color-white: #fff;
 $color-gray: #818181;
 $color-blue: #5cb6f3;
 $color-dark-blue: #282e44;
+$color-black: #000;
 
 body {
   background-color: $color-dark-blue;
@@ -50,7 +51,7 @@ select {
 
 .showcase {
   @extend .radius-8;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba($color-black, 0.1);
 
   & .seat:not(.occupied):hover {
     cursor: default;
@@ -62,7 +63,7 @@ select {
   background-color: $color-white;
   height: 70px;
   transform: rotateX(-45deg);
-  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+  box-shadow: 0 3px 10px rgba($color-white, 0.7);
 }
 
 .container {
