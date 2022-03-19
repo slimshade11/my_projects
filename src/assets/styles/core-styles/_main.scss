@@ -14,18 +14,13 @@ html {
 }
 
 $resolutions: (
+  'xs': 420,
   'sm': 576,
   'md': 768,
   'lg': 992,
   'xl': 1074,
   'xxl': 1500,
 );
-
-$sm-breakpoint: 576px;
-$md-breakpoint: 768px;
-$lg-breakpoint: 992px;
-$xl-breakpoint: 1200px;
-$xxl-breakpoint: 1500px;
 
 @each $resolution, $i in $resolutions {
   .container-max-w-#{$resolution} {

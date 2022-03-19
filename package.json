@@ -1,5 +1,5 @@
 {
-  "name": "embiq-site-frontend",
+  "name": "my-projects",
   "source": "src/assets/js/index.js",
   "scripts": {
     "build": "parcel build ./src/*.html --public-url ./ --no-source-maps",
