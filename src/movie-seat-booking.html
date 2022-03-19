@@ -5,8 +5,99 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie seat booking</title>
+    <link rel="stylesheet" href="./assets/styles/move-seat-booking.scss" />
   </head>
-  <body>
+  <body class="flex flex-column justify-content-center align-items-center min-h-screen">
+    <h2 class="py-2">Movie seat booking</h2>
+    <div class="my-3">
+      <label> Pick a movie:</label>
+      <select class="ml-2 py-2 px-3 cursor-pointer" id="movie">
+        <option value="40">Changeling (40zł)</option>
+        <option value="50">Chłopaki nie płaczą (50zł)</option>
+        <option value="35">American Pie (35zł)</option>
+        <option value="30">Kiler (30zł)</option>
+      </select>
+    </div>
+    <ul class="p-3 mb-3 flex justify-content-between flex-wrap showcase">
+      <li class="flex mx-2">
+        <div class="seat"></div>
+        <small class="ml-1">N/A</small>
+      </li>
+      <li class="flex mx-2">
+        <div class="seat selected"></div>
+        <small class="ml-1">Selected</small>
+      </li>
+      <li class="flex mx-2">
+        <div class="seat occupied"></div>
+        <small class="ml-1">Occupied</small>
+      </li>
+    </ul>
+    <div class="mb-5 container">
+      <div class="w-full my-3 screen"></div>
+      <div class="row flex">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row flex">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row flex">
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row flex">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row flex">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat occupied"></div>
+        <div class="seat occupied"></div>
+      </div>
+      <div class="row flex">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+    </div>
+    <p class="text mt-4">
+      You have selected <span id="count">0</span> seats for a price of <span id="total">0</span>zł
+    </p>
     <script src="./assets/js/movie-seat-booking.js"></script>
   </body>
 </html>

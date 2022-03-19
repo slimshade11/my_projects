@@ -4,7 +4,7 @@
   "scripts": {
     "build": "parcel build ./src/*.html --public-url ./ --no-source-maps",
     "dev": "parcel ./src/*.html",
-    "dev-public": "parcel ./src/index.html --host 0.0.0.0",
+    "dev-public": "parcel ./src/*.html --host 0.0.0.0",
     "format": "npx prettier --write ."
   },
   "husky": {
