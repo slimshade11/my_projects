@@ -9,13 +9,13 @@
     <script src="./assets/js/search-bar.js" defer></script>
   </head>
   <body>
-    <div class="search-wrapper">
+    <div class="flex flex-column search-wrapper">
       <label for="search">Search</label>
       <input type="search" id="search" data-input />
     </div>
-    <div class="user-cards" data-user-cards-container>
+    <div class="grid grid-nogutter user-cards" data-user-cards-container>
       <template data-user-template>
-        <div class="card">
+        <div class="p-2 card">
           <div class="header" data-header></div>
           <div class="body" data-body></div>
         </div>

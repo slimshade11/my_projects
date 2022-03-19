@@ -1,0 +1,44 @@
+@use './core-styles/main';
+
+$color-gray: rgb(153, 153, 153);
+$color-light-gray: rgb(202, 202, 202);
+$color-black: #000;
+
+.search-wrapper {
+  gap: 0.25rem;
+}
+
+input {
+  @extend .radius-5;
+  font-size: 1rem;
+  border: solid 1px $color-gray;
+}
+
+.user-cards {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.25rem;
+  margin-top: 1rem !important;
+}
+
+.card {
+  @extend .radius-5;
+  border: 1px solid $color-black;
+  transition-duration: 0.3s;
+}
+
+.card:hover {
+  background-color: $color-light-gray;
+}
+
+.card > .header {
+  margin-bottom: 0.25rem;
+}
+
+.card > .body {
+  font-size: 0.8rem;
+  color: $color-gray;
+}
+
+.hide {
+  display: none;
+}
