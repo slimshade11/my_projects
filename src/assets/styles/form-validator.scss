@@ -39,11 +39,11 @@ body {
 }
 
 .submit-btn {
-  background-color: transparent;
+  background-color: $color-blue;
   border: 2px solid $color-blue;
+  color: $color-white;
 
   &:hover {
-    background-color: $color-blue;
-    color: $color-white;
+    background-color: lighten($color-blue, 10%);
   }
 }
