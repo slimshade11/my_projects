@@ -1,0 +1,34 @@
+@use './core-styles/main';
+
+$color-white: #fff;
+$color-gray: #9c9b9b;
+$color-green: #06e649;
+$color-blue: #052bd1;
+$color-red: #fc2121;
+
+.video {
+  max-height: 700px;
+}
+
+.btn {
+  @extend .radius-5;
+  border: none;
+  color: $color-white;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 5px $color-blue;
+  }
+
+  &-play {
+    background-color: $color-green;
+  }
+
+  &-stop {
+    background-color: $color-red;
+  }
+}
+
+.bg-gray-500 {
+  background-color: $color-gray;
+}

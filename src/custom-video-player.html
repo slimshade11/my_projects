@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Video Player</title>
+    <link rel="stylesheet" href="./assets/styles/custom-video-player.scss" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+      integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="./assets/js/custom-video-player.js" defer></script>
+  </head>
+  <body>
+    <div class="h-screen flex flex-column justify-content-center align-items-center px-3">
+      <h1 class="text-center mb-3">Custom Video Player</h1>
+      <div class="container-max-w-sm">
+        <video
+          src="./assets/images/custom-video-player-video.mp4"
+          poster="./assets/images/video-poster.png"
+          id="video"
+          class="w-full video"
+        ></video>
+        <div class="bg-gray-500 mt-3 px-3 w-full flex justify-content-center align-items-center">
+          <div class="mr-3">
+            <button class="p-2 btn btn-play" id="play">Play</button>
+            <button class="p-2 btn btn-stop" id="stop">Stop</button>
+          </div>
+          <div class="flex-grow-1">
+            <input type="range" id="progress" class="w-full" min="0" max="100" step="0.1" value="0" />
+          </div>
+          <span id="timestamp" class="ml-3">00:00</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
