@@ -1,13 +1,14 @@
 @use './core-styles/main';
 
 $color-white: #fff;
-$color-gray: #9c9b9b;
+$color-gray: #bbbbbb;
 $color-green: #06e649;
 $color-blue: #052bd1;
 $color-red: #fc2121;
 
 .video {
   max-height: 700px;
+  cursor: pointer;
 }
 
 .btn {
@@ -29,6 +30,6 @@ $color-red: #fc2121;
   }
 }
 
-.bg-gray-500 {
+.bg-gray {
   background-color: $color-gray;
 }

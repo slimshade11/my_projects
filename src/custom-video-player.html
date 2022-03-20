@@ -18,20 +18,20 @@
   <body>
     <div class="h-screen flex flex-column justify-content-center align-items-center px-3">
       <h1 class="text-center mb-3">Custom Video Player</h1>
-      <div class="container-max-w-sm">
+      <div class="bg-gray pb-3 radius-8 container-max-w-sm">
         <video
           src="./assets/images/custom-video-player-video.mp4"
           poster="./assets/images/video-poster.png"
           id="video"
           class="w-full video"
         ></video>
-        <div class="bg-gray-500 mt-3 px-3 w-full flex justify-content-center align-items-center">
+        <div class="mt-3 px-3 w-full flex justify-content-center align-items-center">
           <div class="mr-3">
             <button class="p-2 btn btn-play" id="play">Play</button>
             <button class="p-2 btn btn-stop" id="stop">Stop</button>
           </div>
           <div class="flex-grow-1">
-            <input type="range" id="progress" class="w-full" min="0" max="100" step="0.1" value="0" />
+            <input type="range" id="progress" class="w-full cursor-pointer" min="0" max="100" step="0.1" value="0" />
           </div>
           <span id="timestamp" class="ml-3">00:00</span>
         </div>
