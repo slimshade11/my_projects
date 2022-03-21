@@ -4,6 +4,7 @@ const myProjects = [
   { name: 'Movie seat booking', link: './movie-seat-booking.html' },
   { name: 'Search bar', link: './search-bar.html' },
   { name: 'Custom Video Player', link: './custom-video-player.html' },
+  { name: 'Exchange Rate Calculator', link: './exchange-rate-calculator.html' },
 ];
 
 window.onload = () => {

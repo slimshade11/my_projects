@@ -1,9 +1,5 @@
 @use './core-styles/main';
 
-$color-gray: rgb(153, 153, 153);
-$color-light-gray: rgb(202, 202, 202);
-$color-black: #000;
-
 .search-wrapper {
   gap: 0.25rem;
 }
@@ -11,7 +7,7 @@ $color-black: #000;
 input {
   @extend .radius-5;
   font-size: 1rem;
-  border: solid 1px $color-gray;
+  border: solid 1px main.$color-gray;
 }
 
 .user-cards {
@@ -22,12 +18,12 @@ input {
 
 .card {
   @extend .radius-5;
-  border: 1px solid $color-black;
+  border: 1px solid main.$color-black;
   transition-duration: 0.3s;
 }
 
 .card:hover {
-  background-color: $color-light-gray;
+  background-color: main.$color-light-gray;
 }
 
 .card > .header {
@@ -36,7 +32,7 @@ input {
 
 .card > .body {
   font-size: 0.8rem;
-  color: $color-gray;
+  color: main.$color-gray;
 }
 
 .hide {

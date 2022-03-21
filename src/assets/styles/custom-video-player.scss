@@ -1,11 +1,5 @@
 @use './core-styles/main';
 
-$color-white: #fff;
-$color-gray: #bbbbbb;
-$color-green: #06e649;
-$color-blue: #052bd1;
-$color-red: #fc2121;
-
 .video {
   max-height: 700px;
   cursor: pointer;
@@ -14,22 +8,22 @@ $color-red: #fc2121;
 .btn {
   @extend .radius-5;
   border: none;
-  color: $color-white;
+  color: main.$color-white;
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0 0 5px $color-blue;
+    box-shadow: 0 0 5px main.$color-blue;
   }
 
   &-play {
-    background-color: $color-green;
+    background-color: main.$color-green;
   }
 
   &-stop {
-    background-color: $color-red;
+    background-color: main.$color-red;
   }
 }
 
 .bg-gray {
-  background-color: $color-gray;
+  background-color: main.$color-gray;
 }

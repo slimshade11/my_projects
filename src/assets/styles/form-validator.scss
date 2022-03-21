@@ -1,10 +1,4 @@
-@use './core-styles/_main';
-
-$color-blue: #04b2c9;
-$color-green: #00fd00;
-$color-red: #ff1462;
-$color-gray: #ccc;
-$color-white: #fff;
+@use './core-styles/main';
 
 body {
   min-height: 100vh;
@@ -12,11 +6,11 @@ body {
 
 .form-control {
   &.success input {
-    border-color: $color-green;
+    border-color: main.$color-green;
   }
 
   &.error input {
-    border-color: $color-red;
+    border-color: main.$color-red;
   }
 
   &.error small {
@@ -24,26 +18,26 @@ body {
   }
 
   input {
-    border: $color-gray solid 2px;
+    border: main.$color-gray solid 2px;
 
     &:focus {
-      border-color: $color-gray;
+      border-color: main.$color-gray;
       outline: 0;
     }
   }
 
   small {
     visibility: hidden;
-    color: $color-red;
+    color: main.$color-red;
   }
 }
 
 .submit-btn {
-  background-color: $color-blue;
-  border: 2px solid $color-blue;
-  color: $color-white;
+  background-color: main.$color-blue;
+  border: 2px solid main.$color-blue;
+  color: main.$color-white;
 
   &:hover {
-    background-color: lighten($color-blue, 10%);
+    background-color: lighten(main.$color-blue, 10%);
   }
 }
