@@ -1,7 +1,7 @@
 const main = document.getElementById('main');
 const addUserBtn = document.getElementById('add-user');
 const doubleBtn = document.getElementById('double');
-const showMillionairesBtn = document.getElementById('show-millinaires');
+const showMillionairesBtn = document.getElementById('show-millionaires');
 const sortBtn = document.getElementById('sort');
 const calculateWealthBtn = document.getElementById('calculate-wealth');
 
@@ -44,6 +44,12 @@ function addData(obj) {
   updateDOM();
 }
 
+function showMillionaires() {
+  data = data.filter((item) => item.money > 999999);
+
+  updateDOM();
+}
+
 function updateDOM(providedData = data) {
   main.innerHTML = '<h2 class="flex justify-content-between mb-4"><strong>Person</strong>Wealth</h2>';
 
@@ -58,3 +64,4 @@ function updateDOM(providedData = data) {
 addUserBtn.addEventListener('click', getRandomUser);
 doubleBtn.addEventListener('click', doubleMoney);
 sortBtn.addEventListener('click', sortByRichest);
+showMillionairesBtn.addEventListener('click', showMillionaires);
