@@ -28,6 +28,14 @@ $resolutions: (
   }
 }
 
+button {
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
 ul {
   list-style: none;
   padding-inline: unset;

@@ -1,1 +1,22 @@
 @use 'src/assets/styles/core-styles/variables.scss' as v;
+@use 'src/assets/styles/core-styles/main';
+
+button {
+  @extend .radius-8;
+  border: none;
+  background-color: transparent;
+  box-shadow: v.$box-shadow-border;
+  transition-duration: 0.1s;
+  margin-bottom: 1rem;
+  box-shadow: v.$box-shadow-border;
+
+  &:hover {
+    box-shadow: v.$box-shadow;
+  }
+}
+
+#main {
+  height: 40px;
+  width: 300px;
+  border-bottom: 1px solid v.$color-black;
+}
