@@ -22,7 +22,7 @@ $resolutions: (
 );
 
 @each $resolution, $i in $resolutions {
-  .container-max-w-#{$resolution} {
+  .container-max-widthidth-#{$resolution} {
     max-width: #{$i}px;
     margin: 0 auto !important;
   }

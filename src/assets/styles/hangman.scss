@@ -1,5 +1,19 @@
-@use './core-styles/main' as main;
+@use 'src/assets/styles/core-styles/main' as main;
 
-h1 {
+body {
+  background-color: main.$color-blue-dark;
   color: main.$color-blue;
+}
+
+.figure {
+  &-container {
+    fill: transparent;
+    stroke: main.$color-white;
+    stroke-width: 0.25rem;
+    stroke-linecap: round;
+  }
+
+  &-part {
+    display: none;
+  }
 }
