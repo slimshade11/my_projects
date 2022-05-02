@@ -1,4 +1,5 @@
 // constants
+const randomWord = require('random-words');
 const wordEl = document.getElementById('word');
 const wrongLettersEl = document.getElementById('wrong-letters');
 const playAgainBtn = document.getElementById('play-again');
@@ -8,9 +9,7 @@ const finalMessage = document.getElementById('final-message');
 
 const figureParts = document.querySelectorAll('.figure-part');
 
-const words = ['application', 'programming', 'interface'];
-
-let selectedWord = words[Math.floor(Math.random() * words.length)];
+let selectedWord = randomWord();
 
 const correctLetters = [];
 const wrongLetters = [];
@@ -29,6 +28,8 @@ const displayWord = () => {
     )
     .join('')}
   `;
+
+  console.log(selectedWord);
 
   const innerWord = wordEl.innerText.replace(/\n/g, '');
 
