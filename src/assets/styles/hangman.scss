@@ -17,3 +17,23 @@ body {
     display: none;
   }
 }
+
+.container {
+  &-wrong-letters {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+  }
+}
+
+.word {
+  bottom: 0.625rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .letter {
+    border-bottom: 0.25rem solid main.$color-red;
+    height: 3.125rem;
+    width: 1.25rem;
+  }
+}

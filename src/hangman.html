@@ -9,7 +9,7 @@
     <script src="./assets/js/exchange-rate-calculator.js" defer></script>
   </head>
   <body>
-    <div class="container-max-widthidth-md">
+    <div class="container-max-widthidth-md relative flex flex-column align-items-center justify-content-center py-6">
       <h1 class="text-center">Hangman</h1>
       <p class="mt-5">Find the hidden word - Enter a letter</p>
       <div class="game-container">
@@ -34,6 +34,33 @@
           <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
           <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
         </svg>
+
+        <div class="text-right container-wrong-letters">
+          <div id="wrong-letters">
+            <p class="mr-1">Wrong</p>
+            <span class="text-xl">e,r,t,</span>
+          </div>
+        </div>
+
+        <div class="flex absolute word" id="word">
+          <div class="inline-flex text-3xl align-items-center justify-content-center mx-2 letter">h</div>
+          <div class="inline-flex text-3xl align-items-center justify-content-center mx-2 letter">e</div>
+          <div class="inline-flex text-3xl align-items-center justify-content-center mx-2 letter">l</div>
+          <div class="inline-flex text-3xl align-items-center justify-content-center mx-2 letter">l</div>
+          <div class="inline-flex text-3xl align-items-center justify-content-center mx-2 letter">l</div>
+          <div class="inline-flex text-3xl align-items-center justify-content-center mx-2 letter">o</div>
+        </div>
+      </div>
+
+      <div class="container-popup" id="container-popup">
+        <div class="popup">
+          <h2 id="final-message">You have won!</h2>
+          <button id="play-button">Play again</button>
+        </div>
+      </div>
+
+      <div class="container-notification" id="container-notification">
+        <p>You have already entered this leter</p>
       </div>
     </div>
   </body>
