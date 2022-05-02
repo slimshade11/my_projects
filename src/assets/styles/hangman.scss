@@ -1,0 +1,5 @@
+@use './core-styles/main' as main;
+
+h1 {
+  color: main.$color-blue;
+}
