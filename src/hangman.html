@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/styles/hangman.scss" />
     <title>Hangman</title>
-    <script src="./assets/js/exchange-rate-calculator.js" defer></script>
+    <script src="./assets/js/hangman.js" defer></script>
   </head>
   <body>
     <!-- POPUP  -->
     <div class="fixed align-items-center justify-content-center bg-black-alpha-80 container-popup" id="container-popup">
       <div class="radius p-5 popup">
         <h2 class="text-center" id="final-message">You have won!</h2>
-        <button class="mt-4 mx-auto primary" id="play-button">Play again</button>
+        <button class="mt-4 mx-auto primary" id="play-again">Play again</button>
       </div>
     </div>
 
@@ -45,14 +45,11 @@
         </svg>
 
         <div class="text-right container-wrong-letters">
-          <div id="wrong-letters">
-            <!-- <p class="mr-1">Wrong</p>
-            <span class="text-xl">e,r,t,</span> -->
-          </div>
+          <div id="wrong-letters"></div>
         </div>
 
         <div class="flex justify-content-center word" id="word">
-          <!-- <div class="inline-flex text-3xl align-items-center justify-content-center mx-2 letter">h</div> -->
+          <!-- <div class="">h</div> -->
         </div>
 
         <div class="mt-4 container-notification" id="container-notification">
