@@ -24,13 +24,28 @@ body {
     top: 1.25rem;
     right: 1.25rem;
   }
+
+  &-popup {
+    display: flex;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    z-index: 9;
+
+    .popup {
+      width: 300px;
+      background-color: main.$color-gray;
+    }
+  }
+
+  &-notification {
+    display: none;
+  }
 }
 
 .word {
-  bottom: 0.625rem;
-  left: 50%;
-  transform: translateX(-50%);
-
   .letter {
     border-bottom: 0.25rem solid main.$color-red;
     height: 3.125rem;

@@ -7,7 +7,7 @@ body {
 }
 
 select {
-  @extend .radius-5;
+  @extend .radius;
   border: none;
   background-color: v.$color-white;
   appearance: none;
@@ -45,7 +45,7 @@ select {
 }
 
 .showcase {
-  @extend .radius-8;
+  @extend .radius;
   background-color: rgba(v.$color-black, 0.1);
 
   & .seat:not(.occupied):hover {

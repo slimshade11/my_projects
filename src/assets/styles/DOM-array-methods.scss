@@ -2,7 +2,7 @@
 @use 'src/assets/styles/core-styles/main';
 
 button {
-  @extend .radius-8;
+  @extend .radius;
   border: none;
   background-color: transparent;
   box-shadow: v.$box-shadow-border;

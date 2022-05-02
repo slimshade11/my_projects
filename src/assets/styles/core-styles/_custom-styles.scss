@@ -1,3 +1,4 @@
+@use 'src/assets/styles/core-styles/variables' as vars;
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap');
 
 *,
@@ -22,17 +23,35 @@ $resolutions: (
 );
 
 @each $resolution, $i in $resolutions {
-  .container-max-widthidth-#{$resolution} {
+  .container-max-width-#{$resolution} {
     max-width: #{$i}px;
     margin: 0 auto !important;
   }
 }
 
+.radius {
+  border-radius: 0.5rem;
+}
+
 button {
+  @extend .radius;
   cursor: pointer;
+  border: none;
+  transition-duration: 0.3s;
 
   &:disabled {
     cursor: not-allowed;
+  }
+
+  &.primary {
+    display: block;
+    padding: 0.5rem;
+    background-color: vars.$color-blue;
+    color: vars.$color-white;
+
+    &:hover {
+      background-color: lighten(vars.$color-blue, 10%);
+    }
   }
 }
 
@@ -52,14 +71,4 @@ a {
 
 input {
   font-family: inherit;
-}
-
-.radius {
-  &-5 {
-    border-radius: 5px;
-  }
-
-  &-8 {
-    border-radius: 8px;
-  }
 }

@@ -12,9 +12,9 @@ $box-shadow-border: 0 0 1px 1px rgba(0, 0, 0, 0.4);
 $box-shadow: 0 0 3px 5px rgba(0, 0, 0, 0.1);
 
 // BREAKPOINTS
-$xs-breakpoint: 420px;
-$sm-breakpoint: 576px;
-$md-breakpoint: 768px;
-$lg-breakpoint: 992px;
-$xl-breakpoint: 1200px;
-$xxl-breakpoint: 1500px;
+$breakpoint-xs: 420px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1500px;

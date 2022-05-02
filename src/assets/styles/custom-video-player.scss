@@ -6,7 +6,7 @@
 }
 
 .btn {
-  @extend .radius-5;
+  @extend .radius;
   border: none;
   color: main.$color-white;
   cursor: pointer;

@@ -5,7 +5,7 @@
 }
 
 input {
-  @extend .radius-5;
+  @extend .radius;
   font-size: 1rem;
   border: solid 1px main.$color-gray;
 }
@@ -17,7 +17,7 @@ input {
 }
 
 .card {
-  @extend .radius-5;
+  @extend .radius;
   border: 1px solid main.$color-black;
   transition-duration: 0.3s;
 }
