@@ -29,6 +29,48 @@ const displayWord = () => {
     )
     .join('')}
   `;
+
+  const innerWord = wordEl.innerText.replace(/\n/g, '');
+
+  if (innerWord === selectedWord) {
+    finalMessage.innerText = 'Congratulations! You won!';
+    popup.style.display = 'flex';
+  }
 };
+
+const updateWrongLettersEl = () => {
+  console.log('update wrong');
+};
+
+const showNotification = () => {
+  notification.classList.add('show');
+
+  setTimeout(() => {
+    notification.classList.remove('show');
+  }, 2000);
+};
+
+// Keydown letter press
+window.addEventListener('keypress', (e) => {
+  const letter = e.key;
+
+  if (selectedWord.includes(letter)) {
+    if (!correctLetters.includes(letter)) {
+      correctLetters.push(letter);
+
+      displayWord();
+    } else {
+      showNotification();
+    }
+  } else {
+    if (!wrongLetters.includes(letter)) {
+      wrongLetters.push(letter);
+
+      updateWrongLettersEl();
+    } else {
+      showNotification();
+    }
+  }
+});
 
 displayWord();
