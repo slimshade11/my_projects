@@ -1,11 +1,14 @@
 // constants
-const randomWord = require('random-words');
+import randomWord from 'random-words';
+
 const wordEl = document.getElementById('word');
 const wrongLettersEl = document.getElementById('wrong-letters');
 const playAgainBtn = document.getElementById('play-again');
 const popup = document.getElementById('container-popup');
 const notification = document.getElementById('container-notification');
 const finalMessage = document.getElementById('final-message');
+const wins = document.getElementById('wins');
+const looses = document.getElementById('looses');
 
 const figureParts = document.querySelectorAll('.figure-part');
 
@@ -14,7 +17,11 @@ let selectedWord = randomWord();
 const correctLetters = [];
 const wrongLetters = [];
 
-// functions
+let score = {
+  wins: 0,
+  looses: 0,
+};
+
 const displayWord = () => {
   wordEl.innerHTML = `
   ${selectedWord
@@ -29,18 +36,34 @@ const displayWord = () => {
     .join('')}
   `;
 
-  console.log(selectedWord);
-
   const innerWord = wordEl.innerText.replace(/\n/g, '');
 
   if (innerWord === selectedWord) {
-    finalMessage.innerText = 'Congratulations! You won!';
-    popup.style.display = 'flex';
+    updateWins();
+    showMessage('Congratulations! You won!');
   }
 };
 
 const updateWrongLettersEl = () => {
-  console.log('update wrong');
+  wrongLettersEl.innerHTML = `
+    ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
+    ${wrongLetters.map((letter) => `<span> ${letter} </span>`)}
+  `;
+
+  figureParts.forEach((part, index) => {
+    const errors = wrongLetters.length;
+
+    if (index < errors) {
+      part.style.display = 'block';
+    } else {
+      part.style.display = 'none';
+    }
+  });
+
+  if (wrongLetters.length === figureParts.length) {
+    updateLooses();
+    showMessage('Unfortunatelly You lost.');
+  }
 };
 
 const showNotification = () => {
@@ -48,7 +71,7 @@ const showNotification = () => {
 
   setTimeout(() => {
     notification.classList.remove('show');
-  }, 2000);
+  }, 500);
 };
 
 // Keydown letter press
@@ -73,5 +96,36 @@ window.addEventListener('keypress', (e) => {
     }
   }
 });
+
+const showMessage = (message) => {
+  setTimeout(() => {
+    finalMessage.innerText = message;
+    popup.style.display = 'flex';
+  }, 500);
+};
+
+const restartGame = () => {
+  correctLetters.length = 0;
+  wrongLetters.length = 0;
+
+  selectedWord = randomWord();
+
+  displayWord();
+  updateWrongLettersEl();
+
+  popup.style.display = 'none';
+};
+
+const updateWins = () => {
+  score.wins += 1;
+  wins.innerText = score.wins;
+};
+
+const updateLooses = () => {
+  score.looses += 1;
+  looses.innerText = score.looses;
+};
+
+playAgainBtn.addEventListener('click', () => restartGame());
 
 displayWord();

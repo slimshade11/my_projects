@@ -24,7 +24,7 @@ $resolutions: (
 
 @each $resolution, $i in $resolutions {
   .container-max-width-#{$resolution} {
-    max-width: #{$i}px;
+    max-width: #{$i}px !important;
     margin: 0 auto !important;
   }
 }
