@@ -35,6 +35,8 @@ $resolutions: (
 
 button {
   @extend .radius;
+  display: block;
+  padding: 0.5rem;
   cursor: pointer;
   border: none;
   transition-duration: 0.3s;
@@ -44,13 +46,20 @@ button {
   }
 
   &.primary {
-    display: block;
-    padding: 0.5rem;
     background-color: vars.$color-blue;
     color: vars.$color-white;
 
     &:hover {
       background-color: lighten(vars.$color-blue, 10%);
+    }
+  }
+
+  &.yellow {
+    background-color: vars.$color-yellow;
+    color: vars.$color-blue-dark;
+
+    &:hover {
+      background-color: lighten(vars.$color-yellow, 10%);
     }
   }
 }

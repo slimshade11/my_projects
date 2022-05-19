@@ -6,4 +6,5 @@ export const myProjects = [
   { name: 'Exchange Rate Calculator', link: './exchange-rate-calculator.html' },
   { name: 'DOM Array Methods', link: './DOM-array-methods.html' },
   { name: 'Hangman game', link: './hangman.html' },
+  { name: 'Meal Finder', link: './meal-finder.html' },
 ];

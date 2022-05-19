@@ -1,4 +1,3 @@
-// constants
 import randomWord from 'random-words';
 
 const wordEl = document.getElementById('word');

@@ -1,0 +1,21 @@
+@use 'src/assets/styles/core-styles/_main';
+@use 'src/assets/styles/core-styles/_variables' as vars;
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(45deg, #11998e, #38ef7d);
+}
+
+form {
+  background-color: vars.$color-white;
+
+  input {
+    width: 270px;
+    border: none;
+    outline: none;
+
+    &::placeholder {
+      color: vars.$color-light-gray;
+    }
+  }
+}
