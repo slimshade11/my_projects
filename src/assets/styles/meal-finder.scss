@@ -19,3 +19,32 @@ form {
     }
   }
 }
+
+.meals {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+
+  .meal {
+    width: 180px;
+    height: 180px;
+    cursor: pointer;
+
+    &:hover .meal-info {
+      opacity: 1;
+    }
+
+    &-info {
+      color: vars.$color-white;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity 0.2s ease-in;
+      opacity: 0;
+    }
+  }
+}
+
+img {
+  border: 0.25rem solid vars.$color-white;
+}
