@@ -32,7 +32,7 @@ function searchMeal(event) {
           mealsEl.innerHTML = data.meals
             .map(
               (meal) => `
-                <div class="pointer relative text-center meal">
+                <div class="pointer relative text-center w-full h-full meal">
                   <img class="w-full h-full border-round-md" src="${meal.strMealThumb}"/>
                   <div data-mealID="${meal.idMeal}">
                       <h3 class="h-full w-full absolute flex align-items-center justify-content-center meal-info" >
@@ -47,7 +47,7 @@ function searchMeal(event) {
       });
 
     search.value = '';
-  } else alert('dupa zbita!');
+  } else alert('Type name of meal you are looking for');
 }
 
 submit.addEventListener('click', searchMeal);

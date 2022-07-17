@@ -1,5 +1,5 @@
-@use 'src/assets/styles/core-styles/_main';
-@use 'src/assets/styles/core-styles/_variables' as vars;
+@use 'src/assets/styles/core-styles/main';
+@use 'src/assets/styles/core-styles/variables' as vars;
 
 body {
   min-height: 100vh;
@@ -22,12 +22,10 @@ form {
 
 .meals {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
 
   .meal {
-    width: 180px;
-    height: 180px;
     cursor: pointer;
 
     &:hover .meal-info {
@@ -47,4 +45,10 @@ form {
 
 img {
   border: 0.25rem solid vars.$color-white;
+}
+
+@media (min-width: vars.$breakpoint-lg) {
+  .meals {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
